@@ -1,5 +1,5 @@
-%define version 0.10.0
-%define release %mkrel 4
+%define version 0.10.1
+%define release %mkrel 1
 
 Summary:	Web page link validation program
 Name:		gurlchecker
@@ -23,7 +23,7 @@ BuildRequires:  openjade
 BuildRequires:  libtidy-devel
 BuildRequires:  libcroco0.6-devel
 BuildRequires:	docbook-dtd41-sgml
-#BuildRequires:  gtk-doc
+BuildRequires:  gtk-doc
 BuildRequires:  desktop-file-utils
 %description
 gURLChecker is a graphical web link checker. It can work on a whole
@@ -85,8 +85,8 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_datadir}/%{name}
 %{_datadir}/applications/*
-#%dir %{_datadir}/gtk-doc/html/%{name}
-#%{_datadir}/gtk-doc/html/%{name}/*
+%dir %{_datadir}/gtk-doc/html/%{name}
+%{_datadir}/gtk-doc/html/%{name}/*
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/*
 %{_menudir}/*
