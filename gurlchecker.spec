@@ -8,7 +8,6 @@ Release:	%{release}
 License:	GPL
 Group:		Networking/WWW
 URL:		http://www.nongnu.org/gurlchecker/
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.bz2
 
