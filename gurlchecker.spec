@@ -41,18 +41,6 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 # menu
-mkdir -p %{buildroot}%{_menudir}
-cat << _EOF_ > %{buildroot}%{_menudir}/%{name}
-?package(%{name}): \
- command="%{_bindir}/%{name}" \
- icon="%{name}.png" \
- longtitle="Web page link checker" \
- needs="x11" \
- section="Internet/Other" \
- title="gURLChecker" \
- startup_notify="true" \
- xdg="true"
-_EOF_
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
@@ -89,7 +77,6 @@ rm -rf %{buildroot}
 %{_datadir}/gtk-doc/html/%{name}/*
 %{_datadir}/pixmaps/*
 %{_mandir}/man1/*
-%{_menudir}/*
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
