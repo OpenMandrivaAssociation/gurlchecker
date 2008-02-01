@@ -1,16 +1,16 @@
-%define version 0.10.1
+%define version 0.10.2
 %define release %mkrel 1
 
 Summary:	Web page link validation program
 Name:		gurlchecker
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://www.nongnu.org/gurlchecker/
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
-Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.bz2
+Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.gz
 
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
@@ -33,7 +33,7 @@ site, a single local page or a browser bookmarks file.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --with-tidy=%_includedir
 %make
 
 %install
