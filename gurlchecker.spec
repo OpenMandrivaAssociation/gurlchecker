@@ -46,7 +46,6 @@ rm -rf %{buildroot}
 desktop-file-install --vendor="" \
   --remove-category="Application" \
   --add-category="Network" \
-  --add-category="X-MandrivaLinux-Internet-Other" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 #icons
