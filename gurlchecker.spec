@@ -11,7 +11,7 @@ URL:		http://www.nongnu.org/gurlchecker/
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.gz
-
+Patch0:		gurlchecker-0.10.2-tidydir.patch
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libgnet2-devel
@@ -31,9 +31,10 @@ site, a single local page or a browser bookmarks file.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-%configure2_5x --with-tidy=%_includedir
+%configure2_5x
 %make
 
 %install
