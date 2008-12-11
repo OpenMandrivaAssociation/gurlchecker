@@ -15,7 +15,7 @@ Patch0:		gurlchecker-0.10.2-tidydir.patch
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libgnet2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:  perl(XML::Parser)
 BuildRequires:  gnutls-devel
 BuildRequires:  docbook-utils
