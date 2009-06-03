@@ -1,5 +1,5 @@
 %define version 0.10.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Web page link validation program
 Name:		gurlchecker
@@ -13,6 +13,7 @@ Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.gz
 Patch0:		gurlchecker-0.10.3-tidydir.patch
 Patch1:		gurlchecker-0.10.3-fix-str-fmt.patch
+Patch2:		gurlchecker-0.10.3-gnutls-2.8.patch
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libgnet2-devel
@@ -27,6 +28,7 @@ BuildRequires:	docbook-dtd41-sgml
 BuildRequires:  gtk-doc
 BuildRequires:  desktop-file-utils
 BuildRequires:	intltool
+
 %description
 gURLChecker is a graphical web link checker. It can work on a whole
 site, a single local page or a browser bookmarks file.
@@ -35,8 +37,10 @@ site, a single local page or a browser bookmarks file.
 %setup -q
 %patch0 -p0
 %patch1 -p0
+%patch2 -p0
 
 %build
+autoreconf -fi
 %configure2_5x
 %make
 
