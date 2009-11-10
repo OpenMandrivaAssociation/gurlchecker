@@ -1,5 +1,5 @@
-%define version 0.10.3
-%define release %mkrel 2
+%define version 0.10.5
+%define release %mkrel 1
 
 Summary:	Web page link validation program
 Name:		gurlchecker
