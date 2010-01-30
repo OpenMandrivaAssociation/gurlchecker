@@ -1,4 +1,4 @@
-%define version 0.10.5
+%define version 0.12
 %define release %mkrel 1
 
 Summary:	Web page link validation program
@@ -9,11 +9,9 @@ License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://www.nongnu.org/gurlchecker/
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
-
 Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.gz
 Patch0:		gurlchecker-0.10.3-tidydir.patch
-Patch1:		gurlchecker-0.10.3-fix-str-fmt.patch
-Patch2:		gurlchecker-0.10.3-gnutls-2.8.patch
+Patch1:		gurlchecker-0.12-fix-str-fmt.patch
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libgnet2-devel
@@ -37,10 +35,8 @@ site, a single local page or a browser bookmarks file.
 %setup -q
 %patch0 -p0
 %patch1 -p0
-%patch2 -p0
 
 %build
-autoreconf -fi
 %configure2_5x
 %make
 
