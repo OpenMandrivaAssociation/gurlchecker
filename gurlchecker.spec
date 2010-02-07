@@ -1,4 +1,4 @@
-%define version 0.12
+%define version 0.12.1
 %define release %mkrel 1
 
 Summary:	Web page link validation program
