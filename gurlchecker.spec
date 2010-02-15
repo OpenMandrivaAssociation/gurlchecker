@@ -15,6 +15,8 @@ Patch1:		gurlchecker-0.12-fix-str-fmt.patch
 BuildRequires:	libglade2.0-devel
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	libgnet2-devel
+BuildRequires:	sqlite3-devel
+BuildRequires:	libjson-glib-devel
 BuildRequires:	imagemagick
 BuildRequires:  perl(XML::Parser)
 BuildRequires:  gnutls-devel
