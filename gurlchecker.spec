@@ -1,15 +1,11 @@
-%define version 0.13
-%define release %mkrel 3
-
 Summary:	Web page link validation program
 Name:		gurlchecker
-Version:	%{version}
-Release:	%{release}
+Version:	0.13.1
+Release:	1
 License:	GPLv2+
 Group:		Networking/WWW
 URL:		http://www.nongnu.org/gurlchecker/
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
-Source:		http://labs.libre-entreprise.org/download/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://labs.libre-entreprise.org/frs/download.php/857/%{name}-%{version}.tar.gz
 Patch0:		gurlchecker-0.13-tidydir.patch
 Patch1:		gurlchecker-0.12-fix-str-fmt.patch
 BuildRequires:	libglade2.0-devel
@@ -61,19 +57,6 @@ convert -geometry 32x32 ui/%{name}_icon.png %{buildroot}%{_iconsdir}/%{name}.png
 convert -geometry 16x16 ui/%{name}_icon.png %{buildroot}%{_miconsdir}/%{name}.png
 
 %find_lang %{name}
-
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus
-%endif
 
 %files -f %{name}.lang
 %defattr(-, root, root)
