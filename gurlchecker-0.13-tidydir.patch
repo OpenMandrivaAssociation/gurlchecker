@@ -1,0 +1,44 @@
+--- configure.tidy	2010-02-13 17:22:57.000000000 +0100
++++ configure	2010-02-15 21:43:43.000000000 +0100
+@@ -13773,7 +13773,7 @@
+ $as_echo "$ac_cv_lib_tidy_tidyCreate" >&6; }
+ if test "x$ac_cv_lib_tidy_tidyCreate" = x""yes; then :
+ 
+-	   for ac_header in tidy.h tidy/tidy.h
++	   for ac_header in tidy.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+@@ -13784,7 +13784,7 @@
+ _ACEOF
+ 
+ 	      want_tidy=yes
+-	      TIDY_FLAGS="$TIDY_FLAGS -DHAVE_TIDY_H_IN_SUBDIR -DENABLE_TIDY"
++	      TIDY_FLAGS="$TIDY_FLAGS -DENABLE_TIDY"
+         TIDY_LIBS="-ltidy"
+         LDFLAGS="$LDFLAGS $want_tidy_path"
+ 
+@@ -14010,7 +14010,7 @@
+ _ACEOF
+ 
+ 	      want_gnutls=yes
+-	      GNUTLS_FLAGS="$GNUTLS_FLAGS -DHAVE_GNUTLS_H_IN_SUBDIR -DENABLE_GNUTLS"
++	      GNUTLS_FLAGS="$GNUTLS_FLAGS -DENABLE_GNUTLS"
+         GNUTLS_LIBS="-lgnutls"
+         LDFLAGS="$LDFLAGS $want_gnutls_path"
+ 
+--- configure.in.tidy	2010-02-13 17:22:38.000000000 +0100
++++ configure.in	2010-02-15 21:44:54.000000000 +0100
+@@ -283,10 +283,10 @@
+ 	  [tidyCreate],
+ 	  [
+ 	   AC_CHECK_HEADERS(
+-	     [tidy.h tidy/tidy.h],
++	     [tidy.h],
+ 	     [
+ 	      want_tidy=yes
+-	      TIDY_FLAGS="$TIDY_FLAGS -DHAVE_TIDY_H_IN_SUBDIR -DENABLE_TIDY"
++	      TIDY_FLAGS="$TIDY_FLAGS -DENABLE_TIDY"
+         TIDY_LIBS="-ltidy"
+         LDFLAGS="$LDFLAGS $want_tidy_path"
+ 	     ],

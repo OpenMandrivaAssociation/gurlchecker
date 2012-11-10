@@ -1,0 +1,20 @@
+--- src/application.c.str	2010-01-30 16:47:07.000000000 +0100
++++ src/application.c	2010-01-30 16:47:30.000000000 +0100
+@@ -3115,7 +3115,7 @@
+ 
+   dialog = gtk_message_dialog_new_with_markup (
+     NULL, GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, msg_type,
+-    GTK_BUTTONS_NONE, message);
++    GTK_BUTTONS_NONE, "%s", message);
+   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER_ALWAYS);
+   gtk_dialog_add_buttons (GTK_DIALOG (dialog),
+ 			  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+@@ -3172,7 +3172,7 @@
+ 
+   dialog = gtk_message_dialog_new_with_markup (
+     NULL, GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT, msg_type,
+-    GTK_BUTTONS_OK, message);
++    GTK_BUTTONS_OK, "%s", message);
+   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER_ALWAYS);
+   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
+   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
