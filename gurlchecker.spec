@@ -9,7 +9,7 @@ Source0:	http://labs.libre-entreprise.org/frs/download.php/857/%{name}-%{version
 Patch0:		gurlchecker-0.13-tidydir.patch
 Patch1:		gurlchecker-0.12-fix-str-fmt.patch
 BuildRequires:	libglade2.0-devel
-BuildRequires:	libgnomeui2-devel
+BuildRequires:	pkgconfig(libgnomeui-2.0)
 BuildRequires:	libgnet2-devel
 BuildRequires:	sqlite3-devel
 BuildRequires:	libjson-glib-devel
@@ -18,7 +18,7 @@ BuildRequires:  perl(XML::Parser)
 BuildRequires:  gnutls-devel
 BuildRequires:  docbook-utils
 BuildRequires:  openjade
-BuildRequires:  libtidy-devel
+BuildRequires:  tidy-devel = 1:20090904-7:2013.0
 BuildRequires:  libcroco0.6-devel
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:  gtk-doc
