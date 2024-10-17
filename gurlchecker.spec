@@ -4,7 +4,7 @@ Version:	0.13.1
 Release:	3
 License:	GPLv2+
 Group:		Networking/WWW
-URL:		http://www.nongnu.org/gurlchecker/
+URL:		https://www.nongnu.org/gurlchecker/
 Source0:	http://labs.libre-entreprise.org/frs/download.php/857/%{name}-%{version}.tar.gz
 Patch0:		gurlchecker-0.13-tidydir.patch
 Patch1:		gurlchecker-0.12-fix-str-fmt.patch
